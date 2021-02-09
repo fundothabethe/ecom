@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+.ecom {
+  position: relative;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+}
+
+.ecom header {
+  position: fixed;
+  width: 95%;
+  height: 12vh;
+  top: 0;
+  margin: 0 auto;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: rgba(161, 160, 160, 0.562);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.ecom header .large-width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.ecom header .large-width .shophover {
+  padding: 1.2rem;
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom header .large-width .shophover ul {
+  position: absolute;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  top: 12vh;
+  display: none;
+}
+
+.ecom header .large-width .shophover:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: rgba(41, 43, 48, 0.753);
+}
+
+.ecom header .large-width .shophover:hover ul {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 10rem;
+  color: black;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(161, 160, 160, 0.562);
+}
+
+.ecom header .large-width .shophover:hover li {
+  width: 100%;
+  height: 100%;
+}
+
+.ecom header .large-width li {
+  padding: 1.2rem;
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom header .large-width li:hover {
+  background: rgba(41, 43, 48, 0.753);
+  color: #a1a0a0;
+}
+
+.ecom header .menu {
+  display: none;
+  padding: 2rem;
+  width: 5vh;
+  height: 100%;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 50;
+}
+
+.ecom header h1 {
+  z-index: -10;
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Homemade Apple", cursive;
+}
+
+.ecom header p {
+  padding: 1.2rem;
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom header p:hover {
+  background: rgba(41, 43, 48, 0.753);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #a1a0a0;
+}
+
+.ecom header .buy {
+  display: none;
+  padding: 2rem;
+  width: 5vh;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom header .small-width {
+  display: none;
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(167, 174, 190, 0.897);
+  width: 70vw;
+  height: 100vh;
+}
+
+.ecom header .small-width h3 {
+  margin-bottom: 2rem;
+}
+
+.ecom header .small-width li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  height: 10%;
+  text-align: center;
+  padding: 0 2%;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.ecom header .small-width li:hover {
+  background: rgba(41, 43, 48, 0.753);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #a1a0a0;
+}
+
+.ecom header .null {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .ecom header .large-width {
+    display: none;
+  }
+  .ecom header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ecom header p {
+    display: none;
+  }
+  .ecom header .buy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ecom header .small-width {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .ecom header h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .ecom header {
+    height: 7.5vh;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .ecom header {
+    width: 100%;
+  }
+}
+
+.ecom .body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+}
+
+.ecom .body img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -50;
+}
+
+.ecom .body h3 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 90%;
+  padding: 0 5%;
+  -webkit-transform: translateY(-90%);
+          transform: translateY(-90%);
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: rgba(161, 160, 160, 0.562);
+}
+
+.ecom .part1 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2%;
+}
+
+.ecom .part1 h2 {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom .part1 h3 {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.ecom .part1 .show {
+  margin: 1rem 0;
+}
+
+.ecom .part1 .formalsection {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom .part1 .formalsection img {
+  width: 90%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ecom .part1 .formals {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.ecom .part1 .formals .formalcards img {
+  max-width: 300px;
+  height: 300px;
+  padding: 1%;
+  margin: 10px;
+  -o-object-fit: top;
+     object-fit: top;
+  background-color: antiquewhite;
+}
+
+.ecom .part1 .formals .formalcards p {
+  text-align: center;
+}
+
+.ecom .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.ecom .about h3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.ecom .about .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom .about .about-content div {
+  position: relative;
+  height: 30vh;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.ecom .about .about-content div img {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -10;
+}
+
+.ecom .about .about-content .about-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ecom .about .about-content .about-text p {
+  margin: 1rem 3rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 410px) {
+  .ecom .about .about-content .about-text p {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 822px) {
+  .ecom .about .about-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.ecom .contacts {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.ecom .contacts h2,
+.ecom .contacts h3,
+.ecom .contacts h4,
+.ecom .contacts p {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.ecom .contacts span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom .contacts span span {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.ecom .contacts span span:hover {
+  background: #292b30;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #a1a0a0;
+}
+
+.ecom .contacts form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom .contacts form span {
+  margin: 1rem 0;
+}
+
+.ecom .contacts form .textArea {
+  width: 60vw;
+  height: 2vh;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.ecom .contacts form .button {
+  padding: 0 3rem;
+}
+
+.ecom footer {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: antiquewhite;
+  padding: 2% 0;
+}
+
+.ecom footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ecom footer .social span {
+  margin: 2%;
+  cursor: pointer;
+  padding: 7%;
+}
+
+.ecom footer .social span:hover {
+  background: #292b30;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #a1a0a0;
+}
+
+.ecom footer .final-text {
+  position: relative;
+  text-align: center;
+}
+/*# sourceMappingURL=ecom.css.map */
