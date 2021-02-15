@@ -1,0 +1,97 @@
+.waves {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  background-image: url("topecom.svg");
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.waves2 {
+  position: absolute;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  background-image: url("topecom2.svg");
+  width: 30%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.img2 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -50;
+}
+
+.welcomeText {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 50%;
+  right: 0%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 1rem;
+  background-color: #85767194;
+}
+
+.welcomeText .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 2rem;
+}
+
+.welcomeText .brand div {
+  height: 20px;
+  background-color: var(--secondary-color);
+  width: 20px;
+  border-radius: 50%;
+  margin: auto 0;
+  margin-right: 1rem;
+}
+
+.welcomeText .brand p {
+  border-left: 1px solid var(--secondary-color);
+  padding: 0 1rem;
+}
+
+.welcomeText h2 {
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+}
+
+.welcomeText h4 {
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.welcomeText p {
+  font-size: 1rem;
+}
+/*# sourceMappingURL=larger.css.map */

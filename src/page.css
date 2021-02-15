@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+:root {
+  --primary-color: #857671;
+  --secondary-color: #4e413b;
+  --tertiary-color: #e2ded3;
+}
+
+main .img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -50;
+}
+
+main .box1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 55%;
+  height: 100%;
+  right: 0%;
+  background-color: #4e413b;
+}
+
+main .box1 .brand1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+main .box1 .brand1 div {
+  height: 20px;
+  background-color: var(--primary-color);
+  width: 20px;
+  border-radius: 50%;
+  margin: auto 0;
+  margin-right: 1rem;
+}
+
+main .box1 .brand1 p {
+  border-left: 1px solid var(--primary-color);
+  padding: 0 1rem;
+  color: var(--tertiary-color);
+}
+
+main .box1 h2 {
+  padding-left: 4%;
+  font-family: "EB Garamond", serif;
+  color: var(--tertiary-color);
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: 350;
+}
+
+main .box1 h4 {
+  margin: 1rem 0;
+  padding-left: 4%;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--tertiary-color);
+  font-family: "Assistant", sans-serif;
+}
+
+main .box1 .p {
+  padding-left: 4%;
+  color: var(--tertiary-color);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 270px) {
+  main .box1 .p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 270px) and (max-height: 520px) {
+  main .box1 .p {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 540px) {
+  main .box1 {
+    height: 100%;
+  }
+}
+
+main .box2 {
+  position: absolute;
+  bottom: 0%;
+  width: 55%;
+  right: 0;
+  height: 22.5%;
+  background: var(--primary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .box2 .down-icon {
+  width: 45px;
+  cursor: pointer;
+  height: 45px;
+  color: var(--tertiary-color);
+}
+
+main .box2 .down-icon .lick .below-icon {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=page.css.map */

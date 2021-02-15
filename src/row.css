@@ -1,15 +1,29 @@
+.formalcards {
+  position: relative;
+}
+
 .formalcards img {
-  max-width: 300px;
+  width: 300px;
   height: 300px;
-  padding: 1%;
+  padding: 0 2%;
   margin: 10px;
-  -o-object-fit: top;
-     object-fit: top;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: antiquewhite;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+}
+
+@media screen and (max-width: 300px) {
+  .formalcards img {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 .formalcards p {
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .null {

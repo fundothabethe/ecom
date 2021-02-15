@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+:root {
+  --primary-color: #857671;
+  --secondary-color: #4e413b;
+  --tertiary-color: #e2ded3;
+}
+
 .ecom {
   position: relative;
   width: 100%;
@@ -19,11 +26,12 @@
       -ms-flex-align: center;
           align-items: center;
   overflow-x: hidden;
+  z-index: 0;
 }
 
 .ecom header {
   position: fixed;
-  width: 95%;
+  width: 100%;
   height: 12vh;
   top: 0;
   margin: 0 auto;
@@ -37,9 +45,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: rgba(161, 160, 160, 0.562);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 .ecom header .large-width {
@@ -113,22 +120,27 @@
   height: 100%;
 }
 
-.ecom header .large-width li {
-  padding: 1.2rem;
-  cursor: pointer;
-  height: 100%;
+.ecom header .large-width .link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.2rem;
+  cursor: pointer;
 }
 
-.ecom header .large-width li:hover {
+.ecom header .large-width .link:hover {
   background: rgba(41, 43, 48, 0.753);
   color: #a1a0a0;
 }
@@ -164,7 +176,7 @@
   font-family: "Homemade Apple", cursive;
 }
 
-.ecom header p {
+.ecom header .link {
   padding: 1.2rem;
   cursor: pointer;
   height: 100%;
@@ -179,24 +191,11 @@
           justify-content: center;
 }
 
-.ecom header p:hover {
+.ecom header .link:hover {
   background: rgba(41, 43, 48, 0.753);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   color: #a1a0a0;
-}
-
-.ecom header .buy {
-  display: none;
-  padding: 2rem;
-  width: 5vh;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .ecom header .small-width {
@@ -214,16 +213,18 @@
           justify-content: center;
   top: 0%;
   left: 0%;
-  background-color: rgba(167, 174, 190, 0.897);
-  width: 70vw;
+  background-color: #4e413bd2;
+  width: 0;
   height: 100vh;
+  z-index: 10;
 }
 
 .ecom header .small-width h3 {
   margin-bottom: 2rem;
+  color: var(--tertiary-color);
 }
 
-.ecom header .small-width li {
+.ecom header .small-width .link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,13 +232,14 @@
       -ms-flex-align: center;
           align-items: center;
   width: 70%;
+  color: var(--tertiary-color);
   height: 10%;
   text-align: center;
   padding: 0 2%;
   border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.ecom header .small-width li:hover {
+.ecom header .small-width .link:hover {
   background: rgba(41, 43, 48, 0.753);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -260,11 +262,6 @@
   .ecom header p {
     display: none;
   }
-  .ecom header .buy {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .ecom header .small-width {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -284,46 +281,19 @@
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .ecom header {
-    width: 100%;
-  }
-}
-
 .ecom .body {
   position: relative;
   width: 100%;
   height: 100vh;
+  background: var(--primary-color);
   z-index: -10;
-}
-
-.ecom .body img {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -50;
-}
-
-.ecom .body h3 {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 90%;
-  padding: 0 5%;
-  -webkit-transform: translateY(-90%);
-          transform: translateY(-90%);
-  font-size: 2rem;
-  font-weight: 300;
-  background-color: rgba(161, 160, 160, 0.562);
+  -webkit-box-shadow: 0 0 10px #85767194, 0 0 10px #85767194;
+          box-shadow: 0 0 10px #85767194, 0 0 10px #85767194;
 }
 
 .ecom .part1 {
+  -webkit-box-shadow: 0 0 10px var(--secondary-color);
+          box-shadow: 0 0 10px var(--secondary-color);
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -355,8 +325,23 @@
           justify-content: center;
 }
 
+.ecom .part1 .ladies {
+  width: 70%;
+  background-color: #d12ec3;
+  height: 2px;
+}
+
+.ecom .part1 .seperate {
+  width: 70%;
+  background-color: #929997;
+  height: 2px;
+}
+
 .ecom .part1 h3 {
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
+  width: 100%;
+  position: relative;
+  left: 2%;
 }
 
 .ecom .part1 .show {
@@ -364,6 +349,7 @@
 }
 
 .ecom .part1 .formalsection {
+  padding-bottom: 2rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,18 +370,27 @@
 }
 
 .ecom .part1 .formals {
+  position: relative;
+  padding: 20px 5%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.ecom .part1 .formals .formalcards {
+  position: relative;
 }
 
 .ecom .part1 .formals .formalcards img {
@@ -528,12 +523,13 @@
           justify-content: center;
 }
 
-.ecom .contacts span span {
+.ecom .contacts span a {
+  color: #292b30;
   padding: 1rem;
   cursor: pointer;
 }
 
-.ecom .contacts span span:hover {
+.ecom .contacts span a:hover {
   background: #292b30;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -610,13 +606,14 @@
           justify-content: center;
 }
 
-.ecom footer .social span {
+.ecom footer .social a {
   margin: 2%;
   cursor: pointer;
+  color: #292b30;
   padding: 7%;
 }
 
-.ecom footer .social span:hover {
+.ecom footer .social a:hover {
   background: #292b30;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
