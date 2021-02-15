@@ -16,12 +16,12 @@ function App() {
       },
       {
         img: "formal3.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "formal1.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
     ],
@@ -40,32 +40,32 @@ function App() {
     bags: [
       {
         img: "bag6.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R400.00",
       },
       {
         img: "bag1.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R400.00",
       },
       {
         img: "bag2.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "bag3.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "bag4.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "bag5.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
     ],
@@ -77,7 +77,7 @@ function App() {
       },
       {
         img: "woman2.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
@@ -87,7 +87,7 @@ function App() {
       },
       {
         img: "woman4.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
@@ -134,12 +134,12 @@ function App() {
       },
       {
         img: "woman13.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R380.00",
       },
       {
         img: "woman14.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
@@ -149,27 +149,27 @@ function App() {
       },
       {
         img: "woman16.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R400.00",
       },
       {
         img: "woman17.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R380.00",
       },
       {
         img: "woman18.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R380.00",
       },
       {
         img: "woman19.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R370.00",
       },
       {
         img: "woman20.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "R380.00",
       },
       {
@@ -186,12 +186,12 @@ function App() {
     kidz: [
       {
         img: "kid1.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "kid2.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
@@ -201,39 +201,39 @@ function App() {
       },
       {
         img: "kid4.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
     ],
     shoes: [
       {
         img: "shoes1.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "shoes2.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "shoes3.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "shoes4.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "shoes5.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
       {
         img: "shoes6.jpeg",
-        p: "Ask about this",
+        p: "Ask about this product",
         price: "",
       },
     ],
