@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./page.scss";
 import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
 import { motion } from "framer-motion";

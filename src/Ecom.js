@@ -4,9 +4,7 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import RedditIcon from "@material-ui/icons/Reddit";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -192,7 +190,7 @@ function Ecom({ items }) {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="small-width"
         >
-          <h3 animate={{ scale: 1.2 }}>SHOP HERE💃</h3>
+          <h3 animate={{ scale: 1.2 }}>Collection💃</h3>
           {links("WOMEN", "women")}
           {links("BAGS", "bags")}
           {links("SHOES", "shoes")}
@@ -202,8 +200,7 @@ function Ecom({ items }) {
           {links("CONTACTS", "contacts", -100)}
         </motion.ul>
         <motion.h1 variants={brandbounce} initial="initial" whileHover="bounce">
-          {" "}
-          KP {/*<span style={{ fontFamily: "fantasy" }}> Clothing</span>} */}
+          kp <span className="clothing"> Clothing</span>
         </motion.h1>
         {links("ORDER NOW", "contacts", -100, false)}
       </motion.header>
@@ -403,7 +400,7 @@ function Ecom({ items }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GroupAddIcon />
+            <GroupAddIcon id="insta" />
           </a>
         </span>
         <div className="final-text">

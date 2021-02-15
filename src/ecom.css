@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap");
 :root {
   --primary-color: #857671;
   --secondary-color: #4e413b;
@@ -163,6 +165,7 @@
 .ecom header h1 {
   z-index: -10;
   position: absolute;
+  font-size: 2.25rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,7 +176,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Homemade Apple", cursive;
+  font-family: "Yellowtail", cursive;
+}
+
+.ecom header h1 .clothing {
+  padding-left: 1rem;
+  font-family: "Dr Sugiyama", cursive;
 }
 
 .ecom header .link {
