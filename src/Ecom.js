@@ -160,10 +160,11 @@ function Ecom({ items }) {
         style={headerbk ? styles : {}}
       >
         <ul className="large-width">
-          {links("WOMEN", "women")}
+          {links("DRESS", "women")}
           <div className="shophover">
             SHOP <ArrowDropDownIcon />{" "}
             <ul>
+              {links("BLEZZERS", "blezzers")}
               {links("BAGS", "bags")}
               {links("SHOES", "shoes")}
               {links("KIDS", "kidz")}
@@ -191,7 +192,8 @@ function Ecom({ items }) {
           className="small-width"
         >
           <h3 animate={{ scale: 1.2 }}>Collection💃</h3>
-          {links("WOMEN", "women")}
+          {links("BLEZZERS", "blezzers")}
+          {links("DRESS", "women")}
           {links("BAGS", "bags")}
           {links("SHOES", "shoes")}
           {links("KIDS", "kidz")}
@@ -215,13 +217,25 @@ function Ecom({ items }) {
 
       <section className="part1">
         {/* woman dresses and shit */}
-        <span className="women" />
+
         <h2>WOMEN</h2>
         <div className="formalsection">
           <img src="dress.jpg" alt="formal" />
         </div>
         <div className="ladies" />
+        {/* blezzers */}
+
+        <span className="blezzers" />
+        <h3>BLEZZERS</h3>
+        <span className="formals">
+          {items.blezzers.map((e) => (
+            <Row img={`./woman/${e.img}`} p={e.p} price={e.price} />
+          ))}
+        </span>
+        <div className="ladies" />
+        <span className="women" />
         <h3>DRESS</h3>
+
         <span className="formals">
           {items.women.map((e) => (
             <Row img={`./woman/${e.img}`} p={e.p} price={e.price} />
@@ -323,18 +337,18 @@ function Ecom({ items }) {
             <p>
               Kp clothing is a home of local trends that stands out from the
               crowd. We sell clothes that best suites our customer's moment at
-              thier outmost conveniences, where men and women feel at home.{" "}
+              their outmost conveniences, where men and women feel at home.{" "}
               <br />
               <br />
-              Khanyisile mdaka is undoudtedly one of Soth Africa authentic
+              Khanyisile mdaka is undoudtedly one of South Africa authentic
               entrepreneurs with a unique branding approach.
             </p>
           </div>
         </div>
       </section>
       <section className="contacts">
-        <h2>Contect Details</h2>
-        <h3>get hold of us</h3>
+        <h2>Contact Details</h2>
+        <h3>Get hold of us</h3>
         <h4>Keep in touch with Khanyi</h4>
         <span className="sendmessage">
           <motion.a

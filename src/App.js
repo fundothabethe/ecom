@@ -40,12 +40,12 @@ function App() {
     bags: [
       {
         img: "bag6.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R400.00",
       },
       {
         img: "bag1.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R400.00",
       },
       {
@@ -69,7 +69,7 @@ function App() {
         price: "",
       },
     ],
-    women: [
+    blezzers: [
       {
         img: "woman1.jpeg",
         p: "Zevity rainbow blue coat",
@@ -86,24 +86,27 @@ function App() {
         price: "",
       },
       {
-        img: "woman4.jpeg",
-        p: "Ask about this product",
-        price: "",
-      },
-      {
         img: "woman5.jpeg",
         p: "Yello dust",
         price: "",
       },
+    ],
+    women: [
+      {
+        img: "woman4.jpeg",
+        p: "Ask about this product",
+        price: "",
+      },
+
       {
         img: "woman6.jpeg",
         p: "Vigro Diva",
-        price: "$440.40",
+        price: "",
       },
       {
         img: "woman7.jpeg",
         p: "Kp slim dress",
-        price: "$440.40",
+        price: "",
       },
       {
         img: "woman8.jpeg",
@@ -134,7 +137,7 @@ function App() {
       },
       {
         img: "woman13.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R380.00",
       },
       {
@@ -149,27 +152,27 @@ function App() {
       },
       {
         img: "woman16.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R400.00",
       },
       {
         img: "woman17.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R380.00",
       },
       {
         img: "woman18.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R380.00",
       },
       {
         img: "woman19.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R370.00",
       },
       {
         img: "woman20.jpeg",
-        p: "Ask about this product",
+        p: "",
         price: "R380.00",
       },
       {
