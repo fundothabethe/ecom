@@ -1,24 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./ecom.scss";
+import React, { useEffect, useState } from "react";
+import "./style/ecom.scss";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import PhoneIcon from "@material-ui/icons/Phone";
 import { Button, TextareaAutosize, TextField } from "@material-ui/core";
-import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import AOS from "aos";
-import Row from "./Row";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import Page from "./Page";
 import LargerS from "./LargerS";
 import emailjs from "emailjs-com";
-import GroupAddIcon from "@material-ui/icons/GroupAdd";
+import Footer from "./Footer";
+import { db } from "./Admin/firebase";
+//
 function Ecom({ items }) {
   //states🦗
 
@@ -28,18 +26,12 @@ function Ecom({ items }) {
 
   //formal🐢
 
-  const [allformal, setAllformal] = useState(false);
-  const [formaltext, setFormaltext] = useState("View More");
-
   //women
-
-  const [allwomen, setAllwomen] = useState(false);
-  const [womentext, setWomentext] = useState("View More");
 
   //initiaize a ref
 
-  const header = useRef("");
   const [headerbk, setHeaderbk] = useState(false);
+  const [data, setData] = useState([]);
 
   const styles = {
     backgroundColor: "#e2ded36c",
@@ -49,39 +41,34 @@ function Ecom({ items }) {
   //useEffect🤢
 
   useEffect(() => {
+    //
     AOS.init();
 
     window.addEventListener("scroll", () => {
       window.scrollY >= 700 ? setHeaderbk(true) : setHeaderbk(false);
     });
+
+    //
   }, []);
+
+  //data
+  useEffect(() => {
+    db.collection("categories").onSnapshot(
+      (e) => {
+        setData(e?.docs.map((e) => e.data()));
+      },
+      (err) => {
+        throw err;
+      }
+    );
+  }, []);
+
+  //...
 
   //🧶
 
   const menuHandler = () => {
     setMenu(!menu);
-  };
-
-  //women button handler
-
-  const womenHandler = () => {
-    setAllwomen(!allwomen);
-    if (!allwomen) {
-      setWomentext("View Less");
-    } else {
-      setWomentext("View More");
-    }
-  };
-
-  //formal button handler🐸
-
-  const showMore = () => {
-    setAllformal(!allformal);
-    if (!allformal) {
-      setFormaltext("View Less");
-    } else {
-      setFormaltext("View More");
-    }
   };
 
   //form handler
@@ -150,21 +137,38 @@ function Ecom({ items }) {
     );
   };
 
+  //...
+
+  const ViewRow = ({ info }) => {
+    const filt = data?.filter((e) => e.category === info);
+
+    return (
+      <span className="formals">
+        {filt.map((e) => (
+          <div key={e.url} className="card">
+            <img src={e.url} alt={e.url} />
+            <p>{e.price}</p>
+          </div>
+        ))}
+      </span>
+    );
+  };
+
   return (
     <div className="ecom">
       <motion.header
         initial={{ y: "-100%" }}
         animate={{ y: 0 }}
         transition={{ dalay: 3, duration: 1 }}
-        ref={header}
         style={headerbk ? styles : {}}
       >
         <ul className="large-width">
-          {links("DRESS", "women")}
+          {links("NEW ARRIVALS", "new")}
           <div className="shophover">
             SHOP <ArrowDropDownIcon />{" "}
             <ul>
-              {links("BLEZZERS", "blezzers")}
+              {links("BLAZERS", "blezzers")}
+              {links("DRESS", "women")}
               {links("BAGS", "bags")}
               {links("SHOES", "shoes")}
               {links("KIDS", "kidz")}
@@ -174,11 +178,7 @@ function Ecom({ items }) {
           {links("ABOUT", "about", -60)}
           {links("CONTACTS", "contacts", -100)}
         </ul>
-        <motion.span
-          onClick={{ scale: 1.2 }}
-          onClick={menuHandler}
-          className="menu"
-        >
+        <motion.span onClick={menuHandler} className="menu">
           <MenuIcon />
         </motion.span>
         <motion.ul
@@ -191,8 +191,9 @@ function Ecom({ items }) {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="small-width"
         >
-          <h3 animate={{ scale: 1.2 }}>Collection💃</h3>
-          {links("BLEZZERS", "blezzers")}
+          <h3 animate={{ scale: 1.2 }}>Collections</h3>
+          {links("NEW ARRIVALS", "new")}
+          {links("BLAZERS", "blezzers")}
           {links("DRESS", "women")}
           {links("BAGS", "bags")}
           {links("SHOES", "shoes")}
@@ -207,7 +208,7 @@ function Ecom({ items }) {
         {links("ORDER NOW", "contacts", -100, false)}
       </motion.header>
 
-      {/* ------main-focus */}
+      {/* ------main-focus---------- */}
 
       <section className="body">
         {screenWidth >= 520 ? <LargerS /> : <Page />}
@@ -218,106 +219,51 @@ function Ecom({ items }) {
       <section className="part1">
         {/* woman dresses and shit */}
 
+        <div className="ladies" />
+        <span className="new" />
+        <h3>NEW ARRIVALS</h3>
+        <ViewRow info="New" />
         <h2>WOMEN</h2>
         <div className="formalsection">
-          <img src="dress.jpg" alt="formal" />
+          <img className="big-img" src="dress.jpg" alt="formal" />
         </div>
         <div className="ladies" />
         {/* blezzers */}
-
         <span className="blezzers" />
-        <h3>BLEZZERS</h3>
-        <span className="formals">
-          {items.blezzers.map((e) => (
-            <Row img={`./woman/${e.img}`} p={e.p} price={e.price} />
-          ))}
-        </span>
+        <h3>BLAZERS</h3>
+        <ViewRow info="Blazers" />
         <div className="ladies" />
         <span className="women" />
         <h3>DRESS</h3>
-
-        <span className="formals">
-          {items.women.map((e) => (
-            <Row img={`./woman/${e.img}`} p={e.p} price={e.price} />
-          ))}
-          {allwomen
-            ? items.allwomen.map((e) => (
-                <Row img={`./woman/${e.img}`} p={e.p} price={e.price} />
-              ))
-            : ""}
-        </span>
-        <Button
-          className="show"
-          onClick={womenHandler}
-          color={allwomen ? "primary" : "secondary"}
-          variant="contained"
-        >
-          {" "}
-          {allwomen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-          {womentext}
-        </Button>
+        <ViewRow info="Woman" />
         <div className="ladies" />
-        {/* bagz */}
         <span className="bags" />
         <h3>BAGS</h3>
-        <span className="formals">
-          {items.bags.map((e) => (
-            <Row img={`./bags/${e.img}`} p={e.p} price={e.price} />
-          ))}
-        </span>
+        <ViewRow info="Bags" />
         <div className="ladies" />
-        {/* shoes section*/}
         <span className="shoes" />
         <h3>SHOES</h3>
-        <span className="formals">
-          {items.shoes.map((e) => (
-            <Row img={`./shoes/${e.img}`} p={e.p} price={e.price} />
-          ))}
-        </span>
-        {/* men */}
+        <ViewRow info="Shoes" />
         <div className="ladies" />
         <span className="men" />
         <h2>MEN</h2>
         <div className="formalsection">
-          <img src="formal1.jpg" alt="formal" />
+          <img className="big-img" src="formal1.jpg" alt="formal" />
         </div>
         <div className="seperate" />
         <h3>FORMAL</h3>
-        <span className="formals">
-          {items.formal.map((e) => (
-            <Row img={`./formal suit/${e.img}`} p={e.p} price={e.price} />
-          ))}
-          {allformal
-            ? items.allformal.map((e) => (
-                <Row img={`./formal suit/${e.img}`} p={e.p} price={e.price} />
-              ))
-            : ""}
-        </span>
-        <Button
-          className="show"
-          onClick={showMore}
-          color={allformal ? "primary" : "secondary"}
-          variant="contained"
-        >
-          {" "}
-          {allformal ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-          {formaltext}
-        </Button>
+        <ViewRow info="Man" />
         <div className="seperate" />
-        {/* kids section */}
         <span className="kidz" />
         <h2>KIDZ</h2>
         <div className="formalsection">
-          <img src="kid.jpg" alt="formal" />
+          <img className="big-img" src="kid.jpg" alt="formal" />
         </div>
         <div className="seperate" />
         <h3>CASUAL</h3>
-        <span className="formals">
-          {items.kidz.map((e) => (
-            <Row img={`./kidz/${e.img}`} p={e.p} price={e.price} />
-          ))}
-        </span>
+        <ViewRow info="Kids" />
       </section>
+
       {/* about section */}
 
       <section className="about">
@@ -390,38 +336,9 @@ function Ecom({ items }) {
         </form>
       </section>
       {/* footer done */}
-      <footer>
-        <h3>Follow Khanyi</h3>
-        <span className="social">
-          <motion.a
-            href="https://www.instagram.com/great_kp_mdaka/"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
-          >
-            <InstagramIcon id="insta" />
-          </motion.a>
-          <motion.a
-            href="https://www.facebook.com/kp.mdaka"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
-          >
-            <FacebookIcon id="insta" />
-          </motion.a>
-          <a
-            href="https://chat.whatsapp.com/DyzzJPPEc71G3lKBN6AlPP"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GroupAddIcon id="insta" />
-          </a>
-        </span>
-        <div className="final-text">
-          <h3>All Rights Reserved</h3>
-          <p>©Copyrihgt 2021</p>
-        </div>
-      </footer>
+
+      <div style={{ cursor: "pointer" }} className="amdin"></div>
+      <Footer />
     </div>
   );
 }

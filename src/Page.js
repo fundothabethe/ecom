@@ -1,5 +1,5 @@
 import React from "react";
-import "./page.scss";
+import "./style/page.scss";
 import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
